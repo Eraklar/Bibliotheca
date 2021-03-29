@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane id="ensemble" fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Cgestion_users">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="0.0" prefWidth="72.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="13.0" minWidth="0.0" prefWidth="12.999979654947921" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="3400.0" minWidth="10.0" prefWidth="947.999989827474" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane prefHeight="666.0" prefWidth="1443.0" GridPane.columnIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="3400.0" minWidth="10.0" prefWidth="922.6666768391927" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="11.0" minWidth="9.000030517578125" prefWidth="10.999969482421875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="129.33334350585938" minHeight="2.0" prefHeight="57.00001017252604" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="129.33334350585938" minHeight="2.0" prefHeight="21.000005086263023" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="265.0" minHeight="1.3333333333333357" prefHeight="60.999994913736984" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="332.66669718424475" minHeight="10.0" prefHeight="252.00001780192056" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="332.66669718424475" minHeight="10.0" prefHeight="51.333353678385436" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="332.66669718424475" minHeight="10.0" prefHeight="246.66664632161456" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="63.0" prefWidth="470.0">
+               <children>
+                  <Label layoutX="251.0" layoutY="8.0" prefHeight="51.0" prefWidth="374.0" underline="true">
+                     <font>
+                        <Font name="Javanese Text" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="43.0" prefWidth="320.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField id="barre_recherche" fx:id="inputText_gest" layoutY="1.0" onKeyPressed="#recherche2_U" prefHeight="34.0" prefWidth="298.0" text="Enter an user email">
+                     <font>
+                        <Font name="System Italic" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="259.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#recherche_U" prefHeight="31.0" prefWidth="28.0">
+                     <graphic>
+                        <ImageView id="recherche" fitHeight="25.0" fitWidth="23.0" onMouseClicked="#recherche_U" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/loupe.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="Maj_abo" layoutX="758.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#maj_abo" prefHeight="25.0" prefWidth="137.0" text="Refresh forfait" />
+                  <Label fx:id="lActua" layoutX="567.0" layoutY="10.0" prefHeight="17.0" prefWidth="125.0" />
+               </children>
+            </Pane>
+            <GridPane prefHeight="32.0" prefWidth="923.0" GridPane.rowIndex="4">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="171.33333333333334" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="751.3333333333334" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane maxWidth="1000.0" prefHeight="46.0" prefWidth="532.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button id="button_U" layoutX="405.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#remove_U" prefHeight="25.0" prefWidth="137.0" text="Remove User" />
+                        <Button id="button_U" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#modif_U" prefHeight="25.0" prefWidth="137.0" text="Modify User" />
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+               <top>
+                  <TabPane prefHeight="241.0" prefWidth="931.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                      <Tab fx:id="input_name_U" onCloseRequest="#charg_rendu" onClosed="#charg_rendu" onSelectionChanged="#charg_rendu" text="Add a user">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="5.0" prefHeight="17.0" prefWidth="121.0" text="Last Name :" />
+                                    <Label layoutX="14.0" layoutY="53.0" prefHeight="17.0" prefWidth="167.0" text="First Name :" />
+                                    <Label layoutX="14.0" layoutY="105.0" prefHeight="17.0" prefWidth="131.0" text="Age of user :" />
+                                    <Label layoutX="416.0" layoutY="5.0" prefHeight="17.0" prefWidth="137.0" text="Adress User :" />
+                                    <Label layoutX="191.0" layoutY="105.0" prefHeight="17.0" prefWidth="129.0" text="Phone :" />
+                                    <Label layoutX="477.0" layoutY="105.0" prefHeight="17.0" prefWidth="166.0" text="Password of User :" />
+                                    <Button id="button_U" layoutX="412.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#create_U" prefHeight="25.0" prefWidth="115.0" text="Create User" />
+                                    <Label layoutX="416.0" layoutY="53.0" prefHeight="17.0" prefWidth="137.0" text="Email :" />
+                                    <JFXTextField id="mail" fx:id="input_email_U" layoutX="418.0" layoutY="74.0" onKeyPressed="#validEmail" prefHeight="26.0" prefWidth="374.0" />
+                                    <JFXTextField id="nom" fx:id="input_nom_U" layoutX="14.0" layoutY="22.0" onKeyPressed="#limit" prefHeight="26.0" prefWidth="298.0" />
+                                    <JFXTextField id="prenom" fx:id="input_prenom_U" layoutX="14.0" layoutY="75.0" onKeyPressed="#limit" prefHeight="26.0" prefWidth="298.0" />
+                                    <JFXTextField id="adr" fx:id="input_adresse_U" layoutX="418.0" layoutY="23.0" prefHeight="26.0" prefWidth="374.0" />
+                                    <JFXTextField id="tel" fx:id="input_phone_U" layoutX="191.0" layoutY="134.0" onKeyPressed="#validTel" prefHeight="26.0" prefWidth="150.0" />
+                                    <JFXPasswordField id="mdp" fx:id="input_mdp_U" layoutX="477.0" layoutY="122.0" prefHeight="26.0" prefWidth="314.0" />
+                                    <JFXDatePicker fx:id="input_age_U" layoutX="12.0" layoutY="133.0" />
+                                    <JFXRadioButton id="admin" fx:id="input_admin_U" layoutX="597.0" layoutY="164.0" text="Admin" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="input_name_M" text="Add a book">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="212.0" prefWidth="923.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="130.0" text="Name of book :" />
+                                          <Label layoutX="14.0" layoutY="59.0" prefHeight="17.0" prefWidth="110.0" text="Author :" />
+                                          <Label layoutX="313.0" layoutY="6.0" prefHeight="17.0" prefWidth="113.0" text="Book genre :" />
+                                          <Label layoutX="311.0" layoutY="59.0" prefHeight="17.0" prefWidth="117.0" text="House editor : " />
+                                          <Label layoutX="573.0" layoutY="6.0" prefHeight="17.0" prefWidth="121.0" text="Summary :" />
+                                          <TextArea fx:id="input_resume_L" layoutX="573.0" layoutY="33.0" prefHeight="120.0" prefWidth="315.0" />
+                                          <Button id="button_U" layoutX="375.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#create_L" prefHeight="25.0" prefWidth="127.0" text="Create the book" />
+                                          <JFXTextField fx:id="input_nom_L" layoutX="16.0" layoutY="30.0" prefHeight="25.0" prefWidth="245.0" />
+                                          <JFXTextField fx:id="input_auteur_L" layoutX="16.0" layoutY="80.0" prefHeight="25.0" prefWidth="246.0" />
+                                          <JFXTextField fx:id="input_genre_L" layoutX="313.0" layoutY="30.0" prefHeight="25.0" prefWidth="216.0" />
+                                          <JFXTextField fx:id="input_nb_L" layoutX="15.0" layoutY="129.0" prefHeight="25.0" prefWidth="248.0" />
+                                          <Label layoutX="15.0" layoutY="108.0" prefHeight="17.0" prefWidth="184.0" text="Number of copy :" />
+                                          <JFXTextField fx:id="input_maison_L" layoutX="313.0" layoutY="80.0" prefHeight="25.0" prefWidth="217.0" />
+                                          <Label fx:id="p1" layoutX="545.0" layoutY="171.0" prefHeight="17.0" prefWidth="191.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Add a DVD ">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutY="1.0" onMouseClicked="#create_DVD" prefHeight="211.0" prefWidth="941.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="130.0" text="Name DVD:" />
+                                          <Label layoutX="14.0" layoutY="85.0" prefHeight="17.0" prefWidth="110.0" text="Director :" />
+                                          <Label layoutX="313.0" layoutY="6.0" prefHeight="17.0" prefWidth="113.0" text="DVD genre:" />
+                                          <Label layoutX="573.0" layoutY="6.0" prefHeight="17.0" prefWidth="121.0" text="Summary :" />
+                                          <TextArea fx:id="input_resume_DVD" layoutX="573.0" layoutY="33.0" prefHeight="110.0" prefWidth="315.0" />
+                                          <Button id="button_U" layoutX="375.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#create_DVD" prefHeight="25.0" prefWidth="127.0" text="Create DVD" />
+                                          <JFXTextField fx:id="input_nom_DVD" layoutX="16.0" layoutY="30.0" prefHeight="25.0" prefWidth="245.0" />
+                                          <JFXTextField fx:id="input_real_DVD" layoutX="16.0" layoutY="106.0" prefHeight="25.0" prefWidth="246.0" />
+                                          <JFXTextField fx:id="input_genre_DVD" layoutX="313.0" layoutY="30.0" prefHeight="25.0" prefWidth="216.0" />
+                                          <JFXTextField fx:id="input_nb_DVD" layoutX="314.0" layoutY="106.0" prefHeight="25.0" prefWidth="215.0" />
+                                          <Label layoutX="314.0" layoutY="85.0" prefHeight="17.0" prefWidth="184.0" text="Number of copy :" />
+                                          <Label fx:id="p2" layoutX="545.0" layoutY="171.0" prefHeight="17.0" prefWidth="186.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Gestion des Rendus">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="869.0">
+                                       <children>
+                                          <Button fx:id="bouton_rendu_r" layoutX="738.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#supp_resa" text="Name of work" />
+                                          <TableView fx:id="table_r" layoutX="3.0" prefHeight="200.0" prefWidth="722.0">
+                                            <columns>
+                                              <TableColumn fx:id="mail_r" prefWidth="133.59996938705444" text="mail" />
+                                              <TableColumn fx:id="oeuvre_r" prefWidth="123.20002746582031" text="Name of work" />
+                                                <TableColumn fx:id="auteur_r" prefWidth="121.5999755859375" text="Author" />
+                                                <TableColumn fx:id="genre_r" prefWidth="94.4000244140625" text="Genre" />
+                                                <TableColumn fx:id="date_empr_r" prefWidth="123.20004272460938" text="Booking Date" />
+                                                <TableColumn fx:id="date_retour_r" prefWidth="128.79998779296875" text="Date of return " />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="738.0" layoutY="100.0" prefHeight="17.0" prefWidth="125.0" text="The media is returned" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </top>
+            </BorderPane>
+            <TableView fx:id="table" editable="true" maxWidth="3400.0" prefHeight="261.0" prefWidth="1800.0" GridPane.rowIndex="3">
+              <columns>
+                <TableColumn fx:id="prenom_gest_C" prefWidth="127.99997460842133" text="First Name" />
+                <TableColumn fx:id="nom_gest_C" prefWidth="149.3332977294922" text="Last Name" />
+                  <TableColumn fx:id="num_gest_C" prefWidth="164.0" text="Phone" />
+                  <TableColumn fx:id="email_gest_C" prefWidth="204.00003051757812" text="Email" />
+                  <TableColumn fx:id="adresse_gest_C" prefWidth="297.3333740234375" text="Adress" />
+                  <TableColumn fx:id="age_gest_C" minWidth="0.0" prefWidth="53.33331298828125" text="Age" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <effect>
+                  <Bloom />
+               </effect>
+            </TableView>
+         </children>
+      </GridPane>
+      <GridPane id="pane2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="489.3333638509115" minHeight="10.0" prefHeight="109.99998982747395" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="412.999994913737" minHeight="0.0" prefHeight="163.33333333333337" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="586.6666666666666" minHeight="10.0" prefHeight="387.000020345052" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane id="pane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <AnchorPane id="pane2" fx:id="panneau1" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="b_display" layoutX="4.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#display">
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="63.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/anim.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="pane2" fx:id="panneau2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <AnchorPane id="pane2" fx:id="panneau3" prefHeight="359.0" prefWidth="72.0" GridPane.rowIndex="2">
+               <children>
+                  <Button layoutX="8.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#goto_par">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="41.0" onMouseClicked="#goto_par" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="9.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#goto_compte">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="71.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="5.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#goto_acceuil">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="73.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="b_gestion" layoutX="2.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#goto_gusers" prefHeight="48.0" prefWidth="56.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="57.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/user-icon.png-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

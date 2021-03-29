@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox onKeyPressed="#recherche2" prefHeight="400.0" prefWidth="640.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Cconnection">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Label layoutX="141.0" layoutY="120.0" prefHeight="17.0" prefWidth="85.0" text="Email adress" />
+            <Label layoutX="147.0" layoutY="219.0" text="Password " />
+            <JFXNodesList layoutX="483.0" layoutY="119.0" />
+            <JFXPasswordField id="mdp_conn" fx:id="mdp_inputText" layoutX="237.0" layoutY="215.0" onKeyPressed="#recherche2" />
+            <JFXTextField id="email_conn" fx:id="email_inputText" layoutX="237.0" layoutY="116.0" onKeyPressed="#validEmail" />
+            <Button id="connection" fx:id="b_connect" layoutX="457.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#connection" text="Connection" />
+            <Label fx:id="erreur_connexion" layoutX="229.0" layoutY="293.0" prefHeight="18.0" prefWidth="188.0" textFill="#df0e0e" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button id="blue" defaultButton="true" layoutX="240.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#send" stylesheets="@application.css" text="Forgot Password ?" textFill="#1a1acf">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

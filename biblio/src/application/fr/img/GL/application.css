@@ -1,0 +1,25 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#pane {
+    -fx-background-color: #666666;
+}
+#pane2 {
+	-fx-background-color: #999999;
+}
+
+#reverse{
+	-fx-rotate: 90;
+}
+#reverse .button{
+	
+	-fx-rotate: -90;
+	-fx-width: 20;
+}
+
+.button{
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 1 0 1 0;
+}

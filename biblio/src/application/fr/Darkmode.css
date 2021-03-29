@@ -1,0 +1,105 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#pane2 {
+    -fx-background-color: #322f3d;
+}
+
+
+#ensemble{
+    -fx-background-color: #4b5d67;
+}
+
+.label {
+	-fx-text-fill : #D5C9B3;
+}
+
+
+.button{
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
+	-fx-text-fill : #D5C9B3;
+}
+
+.button:hover{
+	-fx-effect: dropshadow(three-pass-box, rgb(255,200,200), 5, 0, 0, 0); 
+}
+
+#button_page_recherche{
+	-fx-padding: 10; 
+	-fx-background-color:#ffffff;
+	-fx-background-radius: 5;
+}
+
+#barre_recherche{
+	-fx-background-radius: 50px;
+}
+
+
+.table-view{
+	-fx-background-color: transparent;
+}
+
+
+.table-view .filler{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #75040025, #a75f5a67);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: red;
+}
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+#cadre_mdp{
+	-fx-border-color:white;
+	-fx-border-width : 10px;
+}
+
+#button_save_compte{
+	-fx-padding: 10; 
+	-fx-background-color:#ffffff;
+	-fx-background-radius: 5;
+}
+
+
+/* CSS pour la page de Gestionnaire des Users */
+
+#button_U{
+	-fx-padding: 10; 
+	-fx-background-color:#ffffff;
+	-fx-background-radius: 5;
+}
+
+
+/* CSS pour la page Mon Compte */
+
+#save_data{
+	-fx-padding: 10; 
+	-fx-background-color:#ffffff;
+	-fx-background-radius: 5;
+}
